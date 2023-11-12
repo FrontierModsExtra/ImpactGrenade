@@ -1,0 +1,37 @@
+[
+	{
+		"id": "grenade_impact",
+		"copy-from": "grenade",
+		"type": "TOOL",
+		"category": "weapons",
+
+		"name": { "str": "impact grenade" },
+		"description": "Unlike a regular M67 grenade, this one will explode when thrown after the pin had been pulled.",
+
+		"use_action": {
+			"need_wielding": true,
+			"target": "grenade_impact_act",
+			"msg": "You pull the pin on the grenade.",
+			"menu_text": "Pull pin",
+			"type": "transform"
+		},
+
+		"//flags": ["RADIO_MODABLE", "RADIO_INVOKE_PROC", "BOMB", "GRENADE"]
+	},
+	{
+		"id": "grenade_impact_act",
+		"copy-from": "grenade_impact",
+		"type": "TOOL",
+		"category": "weapons",
+
+		"name": { "str": "active impact grenade" },
+		"description": "This impact grenade is active, and will explode any second now.  Better throw it!",
+
+		"use_action": {
+			"type": "explosion",
+			"explosion": { "power": 10 }
+		},
+
+		"flags": ["BOMB", "TRADER_AVOID", "DANGEROUS", "ACT_ON_RANGED_HIT"]
+	}
+]

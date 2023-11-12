@@ -1,0 +1,15 @@
+[
+	{
+		"type": "MOD_INFO",
+		"id": "impact_grenade",
+
+		"name": "impact_grenade",
+		"description": "impact_grenade",
+
+		"authors": ["Hyperseeker"],
+
+		"category": "items",
+
+		"dependencies": ["dda"]
+	}
+]
